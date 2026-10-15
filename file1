@@ -1,3 +1,4 @@
+OUTPUT="system-report.txt"
 echo "Linux System Health Report" > $OUTPUT
 echo "Hostname: $(hostname)" >> $OUTPUT
 echo "Kernel: $(uname -r)" >> $OUTPUT
