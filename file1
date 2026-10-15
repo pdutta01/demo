@@ -1,1 +1,9 @@
-
+echo "Linux System Health Report" > $OUTPUT
+echo "Hostname: $(hostname)" >> $OUTPUT
+echo "Kernel: $(uname -r)" >> $OUTPUT
+DISK_PERCENT=$(df -h / | awk 'NR==2 {print $5}')
+echo "Disk Usage: / - $DISK_PERCENT used" >> $OUTPUT
+MEM_USED=$(free -h | awk 'NR==2 {print $3}')
+MEM_TOTAL=$(free -h | awk 'NR==2 {print $2}')
+echo "Memory Usage: $MEM_USED / $MEM_TOTAL" >> $OUTPUT
+echo "Top Processes: process list" >> $OUTPUT
