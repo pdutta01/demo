@@ -6,7 +6,7 @@ The script processes commands sequentially, utilizing structured data streams to
 WORKING:
 
 OUTPUT="system-report.txt"
-The script begins by creating a variable called $OUTPUT. This acts as a central configuration setting. Whenever the script needs to write data, it points to this variable so you don't have to hardcode the filename multiple times.
+The script begins by creating a variable called $OUTPUT. This acts as a central configuration setting. Whenever the script needs to write data, it points to this variable so we don't have to hardcode the filename multiple times.
 
 echo "Linux System Health Report"> $OUTPUT
 The single > bracket is a destructive write operator. It checks if system-report.txt already exists. If it does, it wipes all historical contents to start fresh. If it doesn't exist, it creates the file and prints the header line.
@@ -36,6 +36,6 @@ EXPECTED OUTPUT :
 
 Hostname: workshop-po
 Kernel: 6.x.x
-Disk Usage:/-45% used
+Disk Usage:  /-45% used
 Memory Usage: 3.2 GB/8GB
 Top Processes: process list
